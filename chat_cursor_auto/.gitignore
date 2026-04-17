@@ -1,0 +1,8 @@
+node_modules/
+back/node_modules/
+front/node_modules/
+back/build/
+front/build/
+.DS_Store
+*.log
+.env.local

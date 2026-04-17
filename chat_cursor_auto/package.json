@@ -1,0 +1,14 @@
+{
+  "name": "chat-cursor-auto",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n front,back -c blue,green \"yarn --cwd front dev\" \"yarn --cwd back dev\"",
+    "build": "yarn --cwd back build && yarn --cwd front build",
+    "db:init": "bash scripts/db-init.sh",
+    "clean": "rm -rf back/build front/build back/node_modules front/node_modules node_modules",
+    "stop": "bash scripts/stop.sh"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

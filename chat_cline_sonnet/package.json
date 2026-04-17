@@ -1,0 +1,21 @@
+{
+  "name": "chat-cline-sonnet",
+  "version": "1.0.0",
+  "description": "Клиент-серверный чат на TypeScript (монорепозиторий)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others --names \"BACK,FRONT\" --prefix-colors \"blue,green\" \"yarn workspace back dev\" \"yarn workspace front dev\"",
+    "build": "yarn workspace back build && yarn workspace front build",
+    "db:init": "yarn workspace back db:init",
+    "clean": "yarn workspace back clean && yarn workspace front clean",
+    "stop": "yarn workspace back stop",
+    "install:all": "yarn workspace back install && yarn workspace front install"
+  },
+  "workspaces": [
+    "back",
+    "front"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
