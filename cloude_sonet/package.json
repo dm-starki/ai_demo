@@ -1,0 +1,22 @@
+{
+  "name": "chat-root",
+  "version": "1.0.0",
+  "description": "AI Chat — клиент-серверный чат. Корневой пакет для управления проектом.",
+  "private": true,
+  "workspaces": [
+    "back",
+    "front"
+  ],
+  "scripts": {
+    "dev": "scripts/dev.sh",
+    "build": "scripts/build.sh",
+    "stop": "scripts/stop.sh",
+    "clean": "scripts/clean.sh",
+    "db:init": "cd back && yarn db:init",
+    "install:all": "cd back && yarn install && cd ../front && yarn install"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  }
+}

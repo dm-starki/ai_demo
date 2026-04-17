@@ -1,0 +1,30 @@
+# Зависимости
+node_modules/
+back/node_modules/
+front/node_modules/
+
+# Сборки
+back/dist/
+front/dist/
+
+# Конфиденциальные файлы окружения
+.env
+back/.env
+front/.env
+
+# Логи
+*.log
+.back.log
+.front.log
+
+# PID файлы
+.pids
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,62 @@
+/* Глобальные стили приложения */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Запрет прокрутки на уровне страницы */
+  overflow: hidden;
+}
+
+/* Анимация индикатора набора текста */
+@keyframes typing-bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Подсветка строки текущего пользователя в таблице */
+.current-user-row {
+  background-color: #f0f7ff !important;
+}
+
+/* Скроллбар в стиле Telegram (тонкий) */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Убираем стандартный outline для кнопок-реакций */
+button:focus-visible {
+  outline: 2px solid #1677ff;
+  outline-offset: 2px;
+}
+
+/* Фон основного чата */
+.ant-layout-content {
+  background: #f5f5f5;
+}

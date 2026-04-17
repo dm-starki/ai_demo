@@ -1,0 +1,32 @@
+/* Сброс внешних отступов — убирает «рамку» вокруг вьюпорта (типичные margin у body). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Ant Design <App> — реальный DOM между #root и маршрутом; без height ломается height:100% у лейаута. */
+.ant-app {
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* Ant Design Layout по умолчанию может задавать отступы у контента */
+.ant-layout,
+.ant-layout-content {
+  margin: 0;
+}
